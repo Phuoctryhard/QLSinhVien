@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* This ensures the container takes the full height of the viewport */
+}
+
+.center {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Tìm kiếm thông tin</h1>
+    </div>
+    
+    <form action="../Controller/C_Student.php" method="POST">
+        <div>
+            <label for="">Trường</label>
+            <select name="search_by">
+                <option value="id">ID</option>
+                <option value="age">Age</option>
+                <option value="name">Name</option>
+                <option value="university">University</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="">Nhập thông tin tìm kiếm</label>
+            <input type="text" name="timkiem" value="">
+        </div>  
+        <div class="center">
+            <button type="submit" name="search">Oki</button>
+        </div>
+     
+    </form>
+    <a href="../index.php">Trang chủ</a>
+
+</body>
+</html>

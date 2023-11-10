@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        p{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="font-size: 30px;">Search Results</h1>
+
+    <?php
+    if (empty($students)) {
+        echo "<p>No data found.</p>";
+    } else {
+        echo "<p>Dữ Liệu Được Tìm Thấy</p>";
+        foreach ($students as $student) {
+            
+            // Display data for each student
+            echo "<p>ID: " . $student['id'] . "</p>";
+            echo "<p>Name: " . $student['name'] . "</p>";
+            echo "<p>Age: ".$student['age']."</p>";
+            echo "<p>University: ".$student['university']."</p>";
+
+            echo "<hr>";
+        }
+    }
+    ?>
+
+    <a href="../index.php">Back to Home</a>
+
+</body>
+</html>
